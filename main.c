@@ -320,9 +320,10 @@ identified:
 		{
 			case EOF:
 			case 'q':
+			case ' ':
+			case 10:
+			case 13:
 				ret = 0;
-				goto done;
-			case ' ': case 10: case 13:
 				goto done;
 			case '>': case '.':
 				ret = 1;
